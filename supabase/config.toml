@@ -1,0 +1,2 @@
+[functions.sticker-vision]
+verify_jwt = false
