@@ -1,0 +1,42 @@
+name: Generate sticker thumbnails
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "stickers/**"
+      - ".github/workflows/generate-thumbnails.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  thumbnails:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install ImageMagick
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y imagemagick
+
+      - name: Build small previews
+        run: |
+          mkdir -p thumbs
+          for file in stickers/*.jpg; do
+            name="$(basename "$file")"
+            convert "$file" -auto-orient -thumbnail '512x512>' -strip -quality 72 "thumbs/$name"
+          done
+
+      - name: Save previews
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add thumbs
+          if ! git diff --cached --quiet; then
+            git commit -m "Generate token-efficient sticker thumbnails"
+            git push
+          fi
