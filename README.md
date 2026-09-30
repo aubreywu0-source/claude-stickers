@@ -10,8 +10,7 @@
 4. 在新仓库里点击 `uploading an existing file`，把本文件夹里的所有内容拖进去并提交。
 5. 等待约 1～3 分钟，让 jsDelivr 同步。
 6. 打开 `CLAUDE_USER_PREFERENCES.md`，把两处占位符替换掉：
-   - `YOUR_GITHUB_USERNAME` → 你的 GitHub 用户名
-   - `YOUR_REPO_NAME` → 仓库名（如果按建议创建，就是 `claude-stickers`）
+   - 本仓库已经配置为 `aubreywu0-source/claude-stickers`，无需再替换地址。
 7. 将替换后的全文复制到 Claude 的 User Preferences（用户偏好）中。
 8. 彻底退出并重新打开 Claude，最好新建一个对话测试：`给我发一个想我的表情包`。
 
@@ -20,7 +19,7 @@
 把下面地址里的用户名和仓库名换成自己的，再在浏览器打开：
 
 ```text
-https://cdn.jsdelivr.net/gh/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME@main/stickers/18-miss-you.jpg
+https://cdn.jsdelivr.net/gh/aubreywu0-source/claude-stickers@main/stickers/18-miss-you.jpg
 ```
 
 能看到“想你了”图片，就说明 Claude 也能取得图片。

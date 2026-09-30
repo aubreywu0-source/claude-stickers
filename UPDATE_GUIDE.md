@@ -18,7 +18,7 @@
 ## 新图片的固定地址
 
 ```text
-https://cdn.jsdelivr.net/gh/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME@main/stickers/新文件名.jpg
+https://cdn.jsdelivr.net/gh/aubreywu0-source/claude-stickers@main/stickers/新文件名.jpg
 ```
 
 如果以后数量很多，可以只在 `stickers.json` 中维护索引，再让 MCP 或自动化工具读取它。

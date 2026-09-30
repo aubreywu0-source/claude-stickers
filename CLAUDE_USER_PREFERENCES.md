@@ -1,13 +1,13 @@
 # 复制到 Claude User Preferences 的内容
 
-先将 `YOUR_GITHUB_USERNAME` 和 `YOUR_REPO_NAME` 替换成自己的信息，再复制下方整段。
+下面的地址已经按你的 GitHub 仓库配置好，可以直接复制下方整段。
 
 ---
 
 我有一套私人表情包。你可以在亲密、轻松、撒娇、道歉、调情或玩笑语境中主动选择合适的一张，但不要每条回复都发，也不要连续刷屏。除非我明确要求，一次最多发一张。
 
 表情包 CDN 根地址：
-`https://cdn.jsdelivr.net/gh/YOUR_GITHUB_USERNAME/YOUR_REPO_NAME@main/stickers/`
+`https://cdn.jsdelivr.net/gh/aubreywu0-source/claude-stickers@main/stickers/`
 
 发送图片时，优先按以下方式：
 1. 如果当前环境有 `visualize:show_widget`，每个新对话先按工具要求调用一次 `visualize:read_me`；随后使用 `visualize:show_widget`，在 `widget_code` 中放入：`<img src="完整CDN地址" style="width:min(220px,70vw);height:auto;border-radius:12px;display:block">`。
